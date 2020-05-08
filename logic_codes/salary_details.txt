@@ -1,0 +1,7 @@
+Salary details
+
+Team leader - 75000
+UI/UX engineer - 55000
+Backend developer - 65000
+Frontend developer - 60000
+Devops engineer - 50000

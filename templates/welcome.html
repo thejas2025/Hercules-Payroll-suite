@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome admin</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>    
+  </head>
+  <body>
+    <nav class="navbar is-transparent">
+        <div class="navbar-start">
+          
+          <a  class="navbar-item">
+            <span style="font-size: 25px;" >Hercules</span>
+          </a>
+        </div>
+      
+        <div id="navbarExampleTransparentExample" class="navbar-menu">
+          <div class="navbar-start">     
+            
+
+            </div>
+          </div>
+      
+          <div class="navbar-end">
+            <div class="navbar-item">
+              <div class="field is-grouped">
+                <p class="control">
+                  <a class="bd-tw-button button" ">
+                    <span class="icon">
+                      <i class="fas fa-user-plus"></i>
+                    </span>
+                    <span>
+                      welcome {{userid_flag}}
+                    </span>
+                  </a>
+                </p>
+                <p class="control">
+                  <a class="button is-link" href="http://localhost:5000/logout/">
+                    <span class="icon">
+                        <i class="fas fa-sign-in-alt"></i>
+                    </span>
+                    <span>Logout</span>
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+<div class="columns">
+<div class="column is-one-fifth">
+      <aside class="menu">
+        
+        <p class="menu-label">
+          Administration
+        </p>
+        <ul class="menu-list">
+          <li><a href="http://localhost:5000/addEmp/">Add Employee</a></li>           
+          <li><a href="http://localhost:5000/updateEmp/">Update Employee</a></li>
+          <li><a href="http://localhost:5000/salaryCalc/">Calculate salary</a></li>          
+        </ul>
+        <p class="menu-label">
+          About 
+        </p>
+        <ul class="menu-list">
+          <li><a>Developers</a></li>           
+          <li><a>Tech Stack</a></li>
+          <li><a>version details</a></li>          
+        </ul>     
+      </aside>
+
+   
+</div>
+
+<div class="column">
+  <hr>
+  <div class="card">
+    <header class="card-header">
+      <p class="card-header-title">
+        Add Employee
+      </p>
+      <a href="#" class="card-header-icon" aria-label="more options">
+        <span class="icon">
+          <i class="fas fa-angle-down" aria-hidden="true"></i>
+        </span>
+      </a>
+    </header>
+    <div class="card-content">
+      <div class="content">
+        Click the add employee option in the left pane of the window under Administration department to add new employee.
+        </div>
+        </div>
+  <hr>
+  <div class="card">
+    <header class="card-header">
+      <p class="card-header-title">
+        Update Employee
+      </p>
+      <a href="#" class="card-header-icon" aria-label="more options">
+        <span class="icon">
+          <i class="fas fa-angle-down" aria-hidden="true"></i>
+        </span>
+      </a>
+    </header>
+    <div class="card-content">
+      <div class="content">
+        Click the update employee option in the left pane of the window under Administration department to update an existing employee's profile.
+        </div>
+        </div>
+        <hr>
+        <div class="card">
+          <header class="card-header">
+            <p class="card-header-title">
+              Calculate salary
+            </p>
+            <a href="#" class="card-header-icon" aria-label="more options">
+              <span class="icon">
+                <i class="fas fa-angle-down" aria-hidden="true"></i>
+              </span>
+            </a>
+          </header>
+          <div class="card-content">
+            <div class="content">
+              Click the Calculate salary option in the left pane of the window under Administration department to send the salary details to the respective employee through their registered mail ID.
+              </div>
+              </div>
+
+  
+</div>
+</div>
+        
+  </body>
+</html>

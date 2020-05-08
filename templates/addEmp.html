@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome admin</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>    
+  </head>
+  <body>
+    <nav class="navbar is-transparent">
+        <div class="navbar-start">
+          
+          <a href="http://localhost:5000/" class="navbar-item">
+            <span style="font-size: 25px;" >Hercules</span>
+          </a>
+          <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      
+        <div id="navbarExampleTransparentExample" class="navbar-menu">
+          <div class="navbar-start">
+
+            </div>
+          </div>
+      
+          <div class="navbar-end">
+            <div class="navbar-item">
+              <div class="field is-grouped">
+                <p class="control">
+                  <a class="bd-tw-button button" ">
+                    <span class="icon">
+                      <i class="fas fa-user-plus"></i>
+                    </span>
+                    <span>
+                      welcome {{userid_flag}}
+                    </span>
+                  </a>
+                </p>
+                <p class="control">
+                  <a class="button is-link" href="http://localhost:5000/logout/">
+                    <span class="icon">
+                        <i class="fas fa-sign-in-alt"></i>
+                    </span>
+                    <span>Logout</span>
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+<div class="columns">
+<div class="column is-one-fifth">
+      <aside class="menu">
+        <p class="menu-label">
+          Administration
+        </p>
+        <ul class="menu-list">
+          <li><a href="http://localhost:5000/addEmp/">Add Employee</a></li>           
+          <li><a href="http://localhost:5000/updateEmp/">Update Employee</a></li>
+          <li><a href="http://localhost:5000/salaryCalc/">Calculate salary</a></li>          
+        </ul>
+        <p class="menu-label">
+          About 
+        </p>
+        <ul class="menu-list">
+          <li><a>Developers</a></li>           
+          <li><a>Tech Stack</a></li>
+          <li><a>version details</a></li>          
+        </ul>     
+      </aside>   
+</div>
+<form action="http://localhost:5000/createemp/" method="POST">
+<div class="column">
+
+    <b>Add new employee<b>
+    <br><br>
+    <div class="field">
+        <label class="label">Employee ID</label>
+            <div class="control">
+              <input class="input is-success" name="empid" type="text" placeholder="Enter employee ID">
+            </div>
+    </div>
+    
+    <div class="field">
+        <label class="label">Employee name</label>
+        <div class="control has-icons-left has-icons-right">
+          <input class="input is-success" name="empname" type="text" placeholder="Enter employee name">
+          <span class="icon is-small is-left">
+            <i class="fas fa-user"></i>
+          </span>          
+        </div>
+    </div>
+    
+    <div class="field">
+      <label class="label">City</label>
+      <div class="control has-icons-left has-icons-right">
+        <input class="input is-success" name="address" type="text" placeholder="Enter city of location">
+      </div>
+    </div>
+
+    <div class="field">
+        <label class="label">Email</label>
+        <div class="control has-icons-left has-icons-right">
+          <input class="input is-success" type="email" placeholder="Specify email ID " name="mailID">
+          <span class="icon is-small is-left">
+            <i class="fas fa-envelope"></i>
+          </span>          
+        </div>
+    </div>
+
+    <div class="field is-horizontal">
+        <div class="field-label is-normal">
+          <label class="label">Age</label>
+        </div>
+
+        <div class="field-body">
+          <div class="field">
+            <input class="input is-success" name="age" type="number" placeholder="Enter age">              
+            
+        </div>
+    </div>
+        <div class="field-label is-normal">
+            <label class="label">Phone no.</label>
+        </div>       
+
+    
+        <div class="field-body">
+            <div class="field">
+            <input class="input is-success" name="phone" type="number" placeholder="Enter phone">              
+            </div>
+        </div>
+          
+    </div>
+
+
+      <div class="field">
+        
+          <label class="label">Designation</label>
+          <div class="control has-icons-left has-icons-right">
+            <div class="select is-success is-medium">
+              <select name="designation">
+                <option>Select designation</option>
+                <option value="Team leader">Team leader</option>
+                <option value="UI/UX engineer">UI/UX engineer</option>
+                <option value="Backend developer">Backend developer</option>
+                <option value="Frontend developer">Frontend developer</option>
+                <option value="Devops engineer">Devops engineer</option>
+              </select>
+            </div>    
+          </div>
+
+                </div>    
+
+ </div> 
+
+ <div class="control">
+  <button type="submit" class="button is-fullwidth is-link">Submit</button>
+</div>
+ </form>
+ </div>
+ 
+  </body>
+</html>

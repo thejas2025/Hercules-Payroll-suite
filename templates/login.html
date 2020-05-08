@@ -14,7 +14,7 @@
           <img src="https://bulma.io/images/bulma-logo.png" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28">
         </a> -->
         <a href="http://localhost:5000/" class="navbar-item">
-          <span style="font-size: 25px;" >CompanyNameHere</span>
+          <span style="font-size: 25px;" >Hercules</span>
         </a>
         <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
           <span></span>
@@ -32,37 +32,6 @@
               About
             </a>
 
-          <!-- <div class="navbar-item has-dropdown is-hoverable">
-            <a class="navbar-link" href="https://bulma.io/documentation/overview/start/">
-              Docs
-            </a>
-             -->
-            <!-- navbar drop down items -->
-
-            <!-- <div class="navbar-dropdown is-boxed">
-              <a class="navbar-item" href="https://bulma.io/documentation/overview/start/">
-                Overview
-              </a>
-              <a class="navbar-item" href="https://bulma.io/documentation/modifiers/syntax/">
-                Modifiers
-              </a>
-              <a class="navbar-item" href="https://bulma.io/documentation/columns/basics/">
-                Columns
-              </a>
-              <a class="navbar-item" href="https://bulma.io/documentation/layout/container/">
-                Layout
-              </a>
-              <a class="navbar-item" href="https://bulma.io/documentation/form/general/">
-                Form
-              </a>
-              <hr class="navbar-divider">
-              <a class="navbar-item" href="https://bulma.io/documentation/elements/box/">
-                Elements
-              </a>
-              <a class="navbar-item is-active" href="https://bulma.io/documentation/components/breadcrumb/">
-                Components
-              </a>
-            </div> -->
           </div>
         </div>
     
@@ -80,7 +49,7 @@
                 </a>
               </p>
               <p class="control">
-                <a class="button is-primary" href="http://localhost:5000/login/">
+                <a class="button is-link" href="http://localhost:5000/login/">
                   <span class="icon">
                       <i class="fas fa-sign-in-alt"></i>
                   </span>
@@ -103,13 +72,23 @@
           </h2>
         </div>
       </section>
-      
+
+      <div class="container">
+        {% if error_msg %}
+        <br>
+        <div class="notification is-warning is-light">
+          <button class="delete"></button>
+          {{error_msg}}
+        </div>
+        <br>
+        {% endif %}
+      </div>
 <div class="container">
-  <form action="http://localhost:5000/login/" method="POST">
+  <form action="http://localhost:5000/loginasHR/" method="POST">
       <div class="field">
         <label class="label">User - ID</label>
         <div class="control">
-          <input class="input" type="text" placeholder="Enter your unique user - ID given by the company">
+          <input class="input is-success" type="text" name="userid" placeholder="Enter your unique user - ID given by the company">
         </div>
       </div>
       
@@ -117,19 +96,31 @@
       <div class="field">
         <label class="label">password</label>
         <div class="control has-icons-left has-icons-right">
-          <input class="input is-success" type="password" placeholder="Email password" >
+          <input class="input is-success" type="password" name=password placeholder="Email password" >
           <span class="icon is-small is-left">
             <i class="fas fa-lock"></i>
           </span>    
           </div>
           <br>          
       <div class="field">
-        <div class="control">
-          <button class="button is-link is-large is-fullwidth" type="submit">Submit</button>
+        <div class="control ">
+          <button class="button is-success is-large is-fullwidth" type="submit">Submit</button>
         </div>
       </div>
     </form>
 </div>
 
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+  (document.querySelectorAll('.notification .delete') || []).forEach(($delete) => {
+    $notification = $delete.parentNode;
+
+    $delete.addEventListener('click', () => {
+      $notification.parentNode.removeChild($notification);
+    });
+  });
+});
+</script>
   </body>
 </html>
