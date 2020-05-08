@@ -7,6 +7,8 @@ Features:<br />
 * Inbuilt email feature to send salary slips to respective employees through their registered email IDs<br />
 * Make sure python3 and flask are installed.
 
+### Clone the repository
+
 In Windows : 
 * Open command prompt inside project directory
 ```shell
